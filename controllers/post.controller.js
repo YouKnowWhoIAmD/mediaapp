@@ -8,7 +8,7 @@ module.exports.createPost = async (req, res, next) => {
   const user = res.locals.user;
   // this user creates posts who is logged in
   const { image, title, description } = req.body;
-  try { dfsdfsdfsd
+  try { 
     const post = new Post({ author: user._id, image, title, description });
     await post.save();
     const postLikes = new PostLikes({ post: post._id });
